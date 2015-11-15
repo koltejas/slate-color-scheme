@@ -1,0 +1,15 @@
+{
+    "name": "slate",
+    "title": "Slate",
+    "description": "Dark theme for Brackets based on slate theme in Dreamweaver.",
+    "homepage": "https://github.com/koltejas",
+    "version": "1.0.0",
+    "author": "Tejas Kolte tejas.k87@rediffmail.com",
+    "license": "MIT",
+    "theme": {
+        "file": "theme.less",
+        "dark": true,
+        "addModeClass": true
+    },
+    "keywords": ["theme", "dark", "slate", "dreamweaver"]
+}

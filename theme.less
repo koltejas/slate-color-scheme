@@ -1,0 +1,381 @@
+/*
+    Slate
+*/
+
+
+/* Base Colors */
+@background: #222222;
+@foreground: #e9e9e9;
+@comments: #919191;
+@blue: #99cdff;
+@green:#93C763;
+@purple: #C48CFF;
+@beige: #ffc39c;
+@red: #fc8889;
+@yellow: #ffdc79;
+@orange: #E89C51;
+@magenta:#ff0077;
+
+/* Selection Colors */
+@selection-color-focused: rgba(255, 255, 255, 0.14);
+@selection-color-unfocused: rgba(255, 255, 255, 0.08);
+
+@activeline-bgcolor: rgba(255, 255, 255, 0.14);
+@matching-bracket: rgba(72, 138, 192, 0.6);
+
+/* CSS */
+@css_property: @beige;
+@css_selector: @blue;
+@css_value: @red;
+@css_import: @purple;
+@css_media: @purple;
+@css_string: @yellow;
+
+
+/* JS */
+@js_bracket: @foreground;
+@js_client_keywords: @green;
+@js_native_keywords: @green;
+@js_operator: @foreground;
+@js_RegExp: @foreground;
+@js_reserved: @green;
+@js_string: @yellow;
+
+
+/* PHP */
+@php_delimiter: @purple;
+@php_bracket: @foreground;
+@php_default_text: @foreground;
+@php_function_keywords: @blue;
+@php_functions: @blue;
+@php_identifier: @foreground;
+@php_number: @red;
+@php_operator: @foreground;
+@php_reserved_keywords: @blue;
+@php_string: @green;
+@php_types: @purple;
+@php_variables: @orange;
+@php_tags: @blue;
+
+/* HTML */
+@html_anchor_tags: @blue;
+@html_attribute_name: @foreground;
+@html_attribute_val: @yellow;
+@html_form_tags: @blue;
+@html_image_tags: @blue;
+@html_number: @red;
+@html_object_tags: @blue;
+@html_other_tags: @blue;
+@html_script_tags: @blue;
+@html_special_chars: #7D7D7D;
+@html_style_tags: @blue;
+@html_table_tags: @blue;
+@html_tags: @blue;
+@html_text: @foreground;
+
+
+/* General Styles */
+-webkit-font-smoothing: antialiased;
+text-shadow: 0px 0px 0px rgba(150, 150, 150, 0.48);
+.CodeMirror {line-height: 1.4;}
+.cm-atom, .cm-string, .cm-string-2, .cm-hr {color: @foreground;}
+.cm-number, .cm-attribute, .cm-plus {color: @foreground;}
+.cm-def, .cm-property {color: @foreground;}
+.cm-variable, .cm-variable-2, .cm-variable-3, .cm-operator, .cm-meta, .cm-bracket {color: @foreground;}
+.cm-comment {color: @comments;}
+.cm-error, .cm-minus {color: @foreground;}
+.cm-header {color: @foreground;}
+.cm-link {color: @foreground; text-decoration: none;}
+.cm-rangeinfo {color: @foreground;}
+.cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {color: @foreground;}
+
+
+/* Extra CSS */
+.CodeMirror-searching {
+    background-color: #ffe497 !important;
+    &.searching-current-match {
+        background-color: #ffc41d !important;
+    }
+}
+.CodeMirror-cursor {
+    border-left: 1px solid @foreground !important;
+}
+.CodeMirror-gutters {
+    background-color: @background;
+}
+.CodeMirror-linenumber {
+    color: @comments;
+}
+.CodeMirror .CodeMirror-selected {
+    background: @selection-color-unfocused;
+    transition: all 360ms ease;
+}
+.CodeMirror-focused .CodeMirror-selected {
+    background: @selection-color-focused;
+}
+
+
+/* Code Styles */
+.CodeMirror, .CodeMirror-scroll {
+    background-color: @background;
+    color: @foreground;
+}
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background: @activeline-bgcolor;
+}
+.CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+        background: @selection-color-focused;
+        color: @foreground;
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+        color: @comments;    
+    }
+}
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+    background-color: @matching-bracket;
+}
+span.CodeMirror-matchingbracket {
+	color: inherit !important;
+}
+
+.CodeMirror .CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none !important;
+    border-bottom: 1px solid @foreground;
+    width: 1.2ex;
+}
+
+.CodeMirror {
+    .CodeMirror {
+        background: transparent;
+    }
+
+    .CodeMirror .CodeMirror-gutters {
+        background: transparent;
+        border-right: none;
+    }
+
+    .CodeMirror .CodeMirror-activeline-background {
+        background: transparent;
+    }
+
+    .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
+        background: @activeline-bgcolor !important;
+    }
+
+    .CodeMirror-focused .CodeMirror-activeline-background {
+        background: @activeline-bgcolor;
+    }
+}
+
+
+/* Non-editor styling */
+.image-view,
+.not-editor {
+    background-color: @background;
+}
+.view-pane .image-view {
+    color: @foreground;
+}
+
+
+/*--------------------------------------
+HTML STYLES
+--------------------------------------*/
+
+.cm-m-xml {
+    color: @foreground;   
+}
+
+.cm-m-xml.cm-comment {
+    color: @comments;   
+}
+
+.cm-m-xml.cm-tag {
+    color: @html_tags;
+}
+
+.cm-m-xml.cm-attribute {
+    color: @html_attribute_name;
+}
+
+.cm-m-xml.cm-string {
+    color: @html_attribute_val;
+}
+
+.cm-m-xml.cm-bracket {
+    color: @blue;
+}
+
+/*--------------------------------------
+PHP STYLES
+--------------------------------------*/
+
+.cm-meta, .cm-m-clike.cm-meta {
+    color: @php_delimiter;
+}
+
+.cm-m-clike {
+    color: @php_bracket;   
+}
+
+.cm-m-clike.cm-keyword {
+    color: @php_reserved_keywords;
+}
+
+.cm-m-clike.cm-builtin {
+    color: @php_function_keywords;   
+}
+
+.cm-m-clike.cm-string {
+    color: @php_string;   
+}
+
+.cm-m-clike.cm-comment {
+    color: @comments;   
+}
+
+.cm-m-clike.cm-variable-2 {
+    color: @php_variables;
+}
+
+.cm-m-clike.cm-operator {
+    color: @php_operator;
+}
+
+.cm-m-clike.cm-bracket {
+    color: @php_bracket;   
+}
+
+.cm-m-clike.cm-number {
+    color: @red;
+}
+
+.cm-m-clike.cm-variable {
+    color: @foreground;   
+}
+
+/*--------------------------------------
+JS STYLES
+---------------------------------------*/
+
+.cm-m-javascript {
+    color: @foreground;
+    color: @js_reserved;
+}
+
+.cm-m-javascript.cm-operator {
+    color: @js_reserved;
+}
+
+.cm-m-javascript.cm-comment {
+    color: @comments;
+}
+
+.cm-m-javascript.cm-variable,
+.cm-m-javascript.cm-variable-2 {
+    color: @foreground;
+}
+
+.cm-m-javascript.cm-variable-3 {
+    color: @orange;
+}
+
+.cm-m-javascript.cm-string {
+    color: @js_string;
+}
+
+.cm-m-javascript.cm-string-2 {
+    color: @js_RegExp;
+}
+
+.cm-m-javascript.cm-def {
+    color: @foreground;
+}
+
+.cm-m-javascript.cm-property {
+    color: @js_client_keywords;
+    color: @foreground;
+}
+
+.cm-m-javascript.cm-keyword {
+    color: @js_reserved;
+}
+
+.cm-m-javascript.cm-number {
+    color: @red;
+}   
+
+/*--------------------------------------
+CSS STYLES
+--------------------------------------*/
+
+.cm-m-css{
+    color: @css_selector;   
+}
+
+.cm-m-css.cm-atom,  
+.cm-m-css.cm-hr {
+    color: @red;
+}
+.cm-m-css.cm-string,
+.cm-m-css.cm-string-2 {
+    color: @yellow;   
+}
+
+.cm-m-css.cm-variable,
+.cm-m-css.cm-number, 
+.cm-m-css.cm-attribute, 
+.cm-m-css.cm-plus {
+    color: @red;
+}
+
+.cm-m-css.cm-keyword { 
+    color: @orange !important;
+}
+
+.cm-m-css.cm-def,
+.cm-m-css.cm-meta,
+.cm-m-css.cm-property {
+    color: @css_property;
+}
+ 
+
+.cm-m-css.cm-variable-2, 
+.cm-m-css.cm-variable-3 {
+    color: @blue;
+}
+.cm-m-css.cm-variable-4 {
+    color: @orange;   
+}
+
+
+.cm-m-css.cm-operator,
+.cm-m-css.cm-bracket {
+    color: @foreground;
+}
+
+.cm-m-css.cm-comment {
+    color: @comments;
+}
+
+.cm-m-css.cm-error,
+.cm-m-css.cm-minus {
+    color: @red;
+}
+
+.cm-m-css.cm-link {
+    color: @yellow;
+}
+
+.cm-m-css.cm-rangeinfo {
+    color: @yellow;
+}
+
+.cm-m-css.cm-keyword, 
+.cm-m-css.cm-qualifier, 
+.cm-m-css.cm-builtin, 
+.cm-m-css.cm-tag,
+.cm-m-css.cm-quote {
+    color: @css_selector;
+}
